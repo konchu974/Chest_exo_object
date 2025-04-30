@@ -6,6 +6,7 @@ public class Roi extends PieceEchecs {
     }
 
     // ✅ checked
+    // JavaDoc
     @Override
     public boolean peutAllerA(int xD, int yD) {
         boolean result = false;
@@ -23,6 +24,7 @@ public class Roi extends PieceEchecs {
     // ✅ checked
     // C'est également un peu plus compliqué et on ne va pas le faire ici car il
     // dépend aussi de la mise en échec
+    // JavaDoc
     @Override
     public boolean peutManger(PieceEchecs pe) {
         if (peutAllerA(pe.getCoordX(), pe.getCoordY()) && (getCouleur() != pe.getCouleur())) {

@@ -6,6 +6,7 @@ public class Fou extends PieceEchecs {
     }
 
     // ✅ Nickel
+    // JavaDoc
     @Override
     public boolean peutAllerA(int xD, int yD) {
         boolean result = false;

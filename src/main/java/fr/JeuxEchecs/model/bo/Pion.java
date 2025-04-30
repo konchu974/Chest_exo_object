@@ -13,6 +13,7 @@ public class Pion extends PieceEchecs {
         }
     }
 
+    // JavaDoc
     @Override
     public boolean peutAllerA(int xD, int yD) {
         boolean result = false;
@@ -28,6 +29,7 @@ public class Pion extends PieceEchecs {
     }
 
     // A revoir car il dépend de la couleur du pion
+    // JavaDoc
     @Override
     public boolean peutManger(PieceEchecs pe) {
         if (peutAllerA(pe.getCoordX() + 1, pe.getCoordY())
