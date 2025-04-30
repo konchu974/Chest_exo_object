@@ -1,5 +1,10 @@
 package fr.JeuxEchecs.model.bo;
 
+// Comme tu as créer l'ENUM Couleur, c'est mieux de l'utiliser partout
+
+// Comme tu as créé l'ENUM Couleur, getCouleur() peut renvoyer une Couleur
+// Dans getCouleurCase(), tu as mis Modulo 3 ?
+// ✅ cheked
 /**
  * The type Piece echecs.
  */
@@ -15,7 +20,7 @@ public abstract class PieceEchecs {
      * @param yD coordonnée en X ou l'on souhaite se deplacer
      * @return the boolean
      */
-    public  abstract boolean peutAllerA(int xD, int yD);
+    public abstract boolean peutAllerA(int xD, int yD);
 
     /**
      * regarde si la piece instancié peut manger une autre piece donné Peut manger
@@ -24,7 +29,6 @@ public abstract class PieceEchecs {
      * @return the boolean
      */
     public abstract boolean peutManger(PieceEchecs pe);
-
 
     /**
      * Instantiates a new Piece echecs.
@@ -44,9 +48,9 @@ public abstract class PieceEchecs {
      *
      * @return the int
      */
-    public int getCouleur(){
+    public int getCouleur() {
         int result = 0;
-        if (couleur==Couleur.BLANC){
+        if (couleur == Couleur.BLANC) {
             result = 1;
         }
         return result;
@@ -57,9 +61,9 @@ public abstract class PieceEchecs {
      *
      * @return the int
      */
-    public int getCouleurCase(){
-        int result =0;
-        if ((coordX + coordY) % 3 == 0){
+    public int getCouleurCase() {
+        int result = 0;
+        if ((coordX + coordY) % 3 == 0) {
             result = 1;
         }
         return result;
@@ -70,8 +74,8 @@ public abstract class PieceEchecs {
      *
      * @return the boolean
      */
-    public boolean estDansLEchiquier(){
-        if (this.coordY <= 8 && this.coordY>0 && this.coordX <= 8 && this.coordX>0){
+    public boolean estDansLEchiquier() {
+        if (this.coordY <= 8 && this.coordY > 0 && this.coordX <= 8 && this.coordX > 0) {
             return true;
         }
         return false;
@@ -92,11 +96,11 @@ public abstract class PieceEchecs {
      * @param coordX the coord x
      */
     public void setCoordX(int coordX) {
-        if (coordX>8){
+        if (coordX > 8) {
             this.coordX = 8;
-        } else if (coordX<1) {
+        } else if (coordX < 1) {
             this.coordX = 1;
-        }else{
+        } else {
             this.coordX = coordX;
         }
     }
@@ -116,11 +120,11 @@ public abstract class PieceEchecs {
      * @param coordY the coord y
      */
     public void setCoordY(int coordY) {
-        if (coordY>8){
+        if (coordY > 8) {
             this.coordY = 8;
-        } else if (coordY<1) {
+        } else if (coordY < 1) {
             this.coordY = 1;
-        }else{
+        } else {
             this.coordY = coordY;
         }
     }

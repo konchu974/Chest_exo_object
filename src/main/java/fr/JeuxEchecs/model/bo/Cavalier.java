@@ -1,12 +1,14 @@
 package fr.JeuxEchecs.model.bo;
 
-public class Cavalier extends PieceEchecs{
+public class Cavalier extends PieceEchecs {
     public Cavalier(int coordX, int coordY, Couleur couleur) {
         super(coordX, coordY, couleur);
     }
 
+    // ✅ Nickel
+    // JavaDoc
     @Override
-    public boolean peutAllerA(int xD, int yD){
+    public boolean peutAllerA(int xD, int yD) {
         boolean result = false;
         int dx = Math.abs(xD - getCoordX());
         int dy = Math.abs(yD - getCoordY());
@@ -18,9 +20,10 @@ public class Cavalier extends PieceEchecs{
         return result;
     }
 
+    // ✅ checked
     @Override
     public boolean peutManger(PieceEchecs pe) {
-        if (peutAllerA(pe.getCoordX(), pe.getCoordY()) && (getCouleur() != pe.getCouleur())){
+        if (peutAllerA(pe.getCoordX(), pe.getCoordY()) && (getCouleur() != pe.getCouleur())) {
             return true;
         }
         return false;
