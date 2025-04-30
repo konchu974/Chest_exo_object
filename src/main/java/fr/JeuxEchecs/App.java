@@ -2,10 +2,9 @@ package fr.JeuxEchecs;
 
 import fr.JeuxEchecs.model.bo.*;
 
-/**
- * Hello world!
- */
+
 public class App {
+
     public static void main(String[] args) {
 
 
